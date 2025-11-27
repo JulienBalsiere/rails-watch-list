@@ -3,3 +3,13 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
