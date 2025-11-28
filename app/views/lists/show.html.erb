@@ -1,16 +1,28 @@
 <div class="container">
   <h1><%= @list.name %></h1>
 
+  <% image_url = @list.photo.attached? ? cl_image_path(@list.photo.key, height: 300, crop: :fill) : asset_path("hollywood-hill.jpg") %>
+
+  <div class="card-category"
+   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url %>')">
+    <%= @list.name %>
+  </div>
+
+  </div>
+
   <% @list.bookmarks.each do |bookmark| %>
-    <div class="card-product">
-      <img src=<%=bookmark.movie.poster_url%> />
+    <div class="card-product" style="background-image: url('<%= bookmark.movie.poster_url %>')">
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
         <p><%= bookmark.comment %></p>
-        <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+        <%= link_to "Delete", bookmark_path(bookmark),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" },
+                    class: "btn btn-danger btn-sm" %>
       </div>
     </div>
   <% end %>
+
 
   <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
 

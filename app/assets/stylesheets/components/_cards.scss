@@ -1,0 +1,34 @@
+.card-category {
+  position: relative;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card-category a {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background: rgba(0,0,0,0.5);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.card-category a:hover {
+  background: rgba(0,0,0,0.8);
+}
