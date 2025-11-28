@@ -30,4 +30,4 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 
 
-puts "Finished! Created #{Movie.count} restaurants."
+puts "Finished! Created #{Movie.count} movies."
