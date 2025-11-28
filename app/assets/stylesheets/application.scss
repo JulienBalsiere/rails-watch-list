@@ -11,6 +11,8 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+@import "components/navbar";
+@import "components/footer";
 
 .btn-success {
   background-color: #778B9F;
@@ -19,5 +21,25 @@
 }
 
 h2 {
+  color: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+body {
+  background: linear-gradient(#34394A, #292D3A);
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
